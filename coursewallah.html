@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Course Wallah | Home </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="banner"></div>
+        </header>
+        <nav>
+            <a class="buttons" href="#">Home</a> <!-- href="Some URL" will take us to the respective pages.
+                But since we have created seperate pages, we are using # for empty URLs. -->
+            <a class="buttons" href="#">Courses</a>
+            <a class="buttons" href="#">Certification Tests</a>
+            <a class="buttons" id="LS" href="#">Login/Sign Up</a>
+        </nav>
+        <main>
+            <section>
+                <h2><span>Courses</span></h2>
+                <div class="carousel"data-flickity='{ "wrapAround": true }'>
+                    <div class="carousel-cell"><video src="encube2.mp4" poster="img.jpg" controls></video></div>
+                    <div class="carousel-cell"><video src="encube2.mp4" poster="img2.jpg" controls></video></div>
+                    <div class="carousel-cell"><video src="encube2.mp4" poster="img.jpg" controls></video></div>
+                    <div class="carousel-cell"><video src="encube2.mp4" poster="img.jpg" controls></video></div>
+                    <div class="carousel-cell"><video src="encube2.mp4" poster="img2.jpg" controls></video></div>
+                </div>  
+            </section>
+            <section>
+                
+                <h2><span>Course Materials</span></h2>
+                <div class="carousel" data-flickity='{ "wrapAround": true }'>
+                    <div class="carousel-cell"><a target="_blank" href="file:///C:/Users/KIIT/Desktop/web%20dev/Graph.pdf" ><img src="notes.png"> </a></div>
+                    <div class="carousel-cell"><a target="_blank" href="file:///C:/Users/KIIT/Desktop/web%20dev/Graph.pdf" ><img src="Screenshot 2023-12-30 222703.png" > </a></div>
+                    <div class="carousel-cell"><a target="_blank" href="file:///C:/Users/KIIT/Desktop/web%20dev/Graph.pdf" ><img src="notes.png"> </a></div>
+                    <div class="carousel-cell"><a target="_blank" href="file:///C:/Users/KIIT/Desktop/web%20dev/Graph.pdf" ><img src="children-with-umbrella-standing-co.jpg"> </a></div>
+                    <div class="carousel-cell"><a target="_blank" href="file:///C:/Users/KIIT/Desktop/web%20dev/Graph.pdf" ><img src="notes.png"> </a></div>
+                </div> 
+            </section>
+            <section>
+                <h2><span>Our Founder</span></h2>
+                <img class="profile_img" src="man-avatar-profile-vector-21372076.jpg" width="250px" height="250px" > 
+                <h3 class="profile_name"> Krishnam Agarwal</h3>
+                <div class="handles">
+                    <a href="https://www.youtube.com/" target="_blank" class="yt"><i class="fa fa-youtube yt"></i>Youtube</a>&nbsp;&nbsp;| 
+                    <a href="https://www.instagram.com/" target="_blank" class="insta"><i class="fa fa-instagram insta"></i>Instagram</a>&nbsp;&nbsp;| <!--DOUBT:  | is shown even when its not within any tag?? -->
+                    <a href="www.linkedin.com/in/krishnam-agarwal-484883251" target="_blank" class="ldin"><i class="fa fa-linkedin ldin"></i>Linkedin</a>
+                </div>
+                <div class="about_founder">
+                    <h4 class="founder_title">BTech in CSE from KIIT University, BBSR.</h4>
+                    <P class="founder_details"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque inventore praesentium rerum eos quo voluptate, vel repellat beatae incidunt ipsam delectus quam esse exes explicabo, quos sit rem fugit hic quas deleniti dignissimos at consequuntur amet? Unde tempora voluptate nostrum accusamus aperiam, corporis, voluptatum repellendus.
+                    </P>
+                </div>    
+            </section>
+        </main>
+        <footer>
+            <a href="#">Contact us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Refund Policy</a>
+            <a class="copyright" href="#">&copy; Course Wallah | 2024</a> <!--&copy; is used for displaying copyright symbol. -->
+        </footer>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    </body>
+</html>
