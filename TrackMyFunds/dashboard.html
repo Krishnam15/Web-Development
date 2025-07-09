@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>TrackMyFunds | Budgeting made Easy!</title>
+    <link rel="stylesheet" href="style_board.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <i class="fa-solid fa-bars sidebar-toggle" id="toggle-btn"></i>
+            <h2 class="logo">TrackMyFunds.com</h2>
+        </div>
+        <div class="center-date">
+            <i class="fa-solid fa-calendar-days calendar-icon"></i>
+            <span id="day-name"></span>
+        </div>
+        <div class="right">
+            <button class="icon-btn" title="Search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+            <button class="icon-btn" title="Notifications">
+    <i class="fa-solid fa-bell"></i>
+  </button>
+            <button class="icon-btn user-profile" title="Account">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User" />
+  </button>
+        </div>
+
+    </header>
+
+    <div class="wrapper" id="wrapper">
+        <aside class="sidebar" id="sidebar">
+            <nav class="nav-menu">
+                <button class="nav-btn">
+            <i data-lucide="layout-dashboard"></i> Dashboard
+        </button>
+                <button class="nav-btn">
+            <i data-lucide="receipt-text"></i> Transactions
+        </button>
+                <button class="nav-btn">
+            <i data-lucide="pie-chart"></i> Analytics
+        </button>
+                <button class="nav-btn">
+            <i data-lucide="user-circle"></i> Account
+        </button>
+                <button class="nav-btn">
+            <i data-lucide="settings"></i> Settings
+        </button>
+            </nav>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            <div class="top-summary">
+                <div class="left">
+                    <div class="row">
+                        <div class="todays-balance balance-box">
+                            <p>Today's Balance</p>
+                            <h2>$0</h2>
+                        </div>
+                        <div class="spendings balance-box">
+                            <p>Spendings</p>
+                            <h2>$0</h2>
+                            <canvas id="expenseChart" height="100"></canvas>
+                        </div>
+                        <div class="savings balance-box">
+                            <p>Savings</p>
+                            <h2>$0</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="income balance-box">
+                            <p>Monthly Budget</p>
+                            <h2>$0</h2>
+                        </div>
+                        <div class="availble-balance balance-box">
+                            <p>Available Balance</p>
+                            <h2>$0</h2>
+                            <canvas id="incomeChart" height="100"></canvas>
+                        </div>
+                        <div class="savings-rate balance-box">
+                            <p>Savings Rate</p>
+                            <h2>$0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="secondary summary">
+                <div class="income-expense-graph">
+                    <h3> Income & Expenses</h3>
+                    <canvas id="incomeExpensesChart" height="100"></canvas>
+                </div>
+                <div class="spend-categories">
+                    <h3>Expense Categories</h3>
+                    <div class="categories-wrapper">
+                        <ul class="top-categories"></ul>
+                        <canvas id="spendingsChart" width="200" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <section class="data-inputs">
+                <form id="incomeForm">
+                    <button type="submit" class="floating-btn income-btn" title="Add Income">+</button>
+                </form>
+                <form id="expenseForm">
+                    <button type="submit" class="floating-btn expense-btn" title="Add Expense">−</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQ</a>
+        <a href="#">Privacy Policy</a>
+        <a class="copyright" href="#">&copy; TrackMyFunds.com | 2025</a>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script_board.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script_backend.js"></script>
+
+</body>
+
+</html>

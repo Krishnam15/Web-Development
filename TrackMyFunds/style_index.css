@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.left-pane {
+    width: 40%;
+    background: #1e2a38;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align to top */
+    padding: 0px 30px 30px;
+    /* reduced top padding */
+    position: relative;
+}
+
+.left-pane h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.left-pane p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #b0bec5;
+    margin-bottom: 25px;
+}
+
+#signup-form,
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 350px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    padding: 14px;
+    background-color: #42a5f5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e88e5;
+}
+
+.toggle-form {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #90caf9;
+}
+
+.toggle-form span {
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.right-pane {
+    width: 60%;
+    background: #0d1929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+    box-sizing: border-box;
+}
+
+.slideshow-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 100px;
+}
+
+.slideshow {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: #111f33;
+    margin-bottom: 20px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1.02);
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #b0c4de;
+    text-align: center;
+    max-width: 90%;
+    line-height: 1.6;
+}
+
+footer {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 0.9rem;
+    color: #90a4ae;
+}

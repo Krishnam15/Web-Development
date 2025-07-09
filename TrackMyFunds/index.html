@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TrackMyFunds.com - Welcome!</title>
+    <link rel="stylesheet" href="style_index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-pane">
+            <h1>Welcome to TrackMyFunds.com</h1>
+
+            <!-- Login Description -->
+            <p id="login-message">Take control of your personal finances with ease. Track your spendings, boost your savings, and gain insights with our smart analytics.</p>
+
+            <!-- Signup Description (Initially Hidden) -->
+            <p id="signup-message" class="hidden">Create your free account to get started!</p>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" required />
+
+                <button type="submit">Login</button>
+                <p class="toggle-form">Don't have an account? <span onclick="toggleForms()">Sign up!</span></p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signup-form" class="hidden">
+                <label for="new-email">Email ID</label>
+                <input type="email" id="new-email" required />
+
+                <label for="new-password">Password</label>
+                <input type="password" id="new-password" required />
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" required />
+
+                <button type="submit">Signup</button>
+                <p class="toggle-form">Already have an account? <span onclick="toggleForms()">Login</span></p>
+            </form>
+        </div>
+
+        <div class="right-pane">
+            <div class="slideshow-wrapper">
+                <div class="slideshow">
+                    <div class="slide active"><img src="assets/dashboard1.png" /></div>
+                    <div class="slide"><img src="assets/dashboard2.png" /></div>
+                    <div class="slide"><img src="assets/dashboard3.png" /></div>
+                </div>
+                <p class="tagline">Fast-track your savings goals.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>&copy; 2025 TrackMyFunds.com</footer>
+
+    <script src="script_index.js"></script>
+</body>
+
+</html>

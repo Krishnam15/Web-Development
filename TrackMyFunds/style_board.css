@@ -1,0 +1,462 @@
+/* General Layout */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1121;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Header Layout */
+
+header.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #0d1121;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 1000;
+}
+
+.header .left,
+.header .center,
+.header .right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .logo {
+    font-size: 20px;
+    font-family: "Comic Sans MS", cursive;
+    font-weight: bold;
+    background: linear-gradient(to right, #FF7F50, #DC143C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.center-date {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    background-color: #1b1f32;
+}
+
+.calendar-icon {
+    padding-right: 5px;
+}
+
+.user-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin: 0 6px;
+    font-size: 1.2rem;
+    color: #fff;
+    /* or desired icon color */
+    transition: background 0.2s ease;
+}
+
+.icon-btn:hover {
+    background: rgba(128, 128, 128, 0.3);
+    border-radius: 50%;
+}
+
+#toggle-btn {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+#toggle-btn:hover {
+    background: rgba(128, 128, 128, 0.3);
+    border-radius: 50%;
+}
+
+.icon-btn img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+
+/* Wrapper layout */
+
+.wrapper {
+    display: flex;
+    margin-top: 60px;
+}
+
+
+/* Sidebar Layout */
+
+.sidebar {
+    width: 220px;
+    background-color: #171b2f;
+    color: white;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    transition: transform 0.3s ease;
+    z-index: 500;
+}
+
+.sidebar-toggle {
+    cursor: pointer;
+}
+
+.sidebar.hidden {
+    transform: translateX(-220px);
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.nav-btn i {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background-color: #1e2239;
+    color: #cbd5e1;
+}
+
+
+/* Main Window layout */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+}
+
+.wrapper.sidebar-hidden .main-content {
+    margin-left: 0;
+}
+
+
+/* Top Summary layout */
+
+.top-summary {
+    display: flex;
+    gap: 12px;
+    /* reduced from 20px */
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    /* reduced from 20px */
+    flex-wrap: nowrap;
+}
+
+.top-summary .left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /* reduced from 20px */
+    flex: 1;
+}
+
+.top-summary .row {
+    display: flex;
+    gap: 60px;
+    /* reduced from 60px */
+}
+
+
+/* Unified box style */
+
+.balance-box {
+    background-color: #1b1f32;
+    padding: 20px 25px;
+    border-radius: 10px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    height: 150px;
+    flex-shrink: 0;
+    /* Prevents it from shrinking in flex layout */
+}
+
+.todays-balance {
+    background: linear-gradient(to right, #FF7F50, #DC143C);
+}
+
+.income {
+    background: linear-gradient(to right, #0b694a, #3de7ae);
+}
+
+
+/* Shared typography styling */
+
+.balance-box h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.balance-box p {
+    font-size: 1.2em;
+    margin-bottom: 1px;
+}
+
+
+/* graphs */
+
+.spendings canvas {
+    width: 100% !important;
+    height: 60px !important;
+}
+
+.availble-balance canvas {
+    width: 100% !important;
+    height: 60px !important;
+}
+
+.spend-categories {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* reduce gap below heading */
+    max-width: 600px;
+    margin: auto;
+    color: #333;
+    /* ensure text visibility */
+}
+
+.spend-categories h3 {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+}
+
+.categories-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.top-categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.top-categories li {
+    margin: 6px 0;
+    padding: 6px 10px;
+    background: #f0f0f0;
+    /* lighter gray to show against white */
+    border-radius: 6px;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#spendingsChart {
+    width: 180px !important;
+    height: 180px !important;
+    flex-shrink: 0;
+}
+
+.spend-categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.top-categories h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #eee;
+}
+
+canvas {
+    max-height: 200px;
+}
+
+
+/* Secondary Summary Layout */
+
+.secondary.summary {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    /* Optional: Wraps on small screens */
+}
+
+.income-expense-graph,
+.spend-categories {
+    flex: 1;
+    background-color: #1b1f32;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    /* Ensures good spacing on smaller screens */
+}
+
+.income-expense-graph h3,
+.spend-categories h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+
+/* Floating Buttons layout*/
+
+.floating-btn {
+    position: fixed;
+    right: 60px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.income-btn {
+    bottom: 120px;
+    background-color: #0b694a;
+}
+
+.income-btn:hover {
+    background-color: #22bd89;
+}
+
+.expense-btn {
+    bottom: 50px;
+    background-color: #DC143C;
+}
+
+.expense-btn:hover {
+    background-color: #fb7240;
+}
+
+
+/* Footer layout */
+
+footer {
+    background-color: #171b2f;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 30px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    border-top: 1px solid #2a2f4a;
+    transition: all 0.3s ease;
+    width: 100%;
+    /* REMOVE anything related to fixed position or forced visibility */
+    position: relative;
+    /* <-- makes sure it stays in normal flow */
+    bottom: unset;
+    left: unset;
+    z-index: unset;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer .copyright {
+    margin-left: auto;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .top-summary {
+        flex-direction: column;
+    }
+    .savings {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .balance-box {
+        width: 100%;
+    }
+}
