@@ -15,11 +15,6 @@
 
 - **HTML5**, **CSS3**, **JavaScript (ES6)**
 - **Chart.js** – for dynamic charts and graphs
-- **Responsive Web Design** – optimized for all screen sizes
-
-## 📷 Screenshots
-
-> *(Add relevant screenshots here if available, e.g. dashboard view, charts, mobile view, etc.)*
 
 ## 🛠️ Getting Started
 
