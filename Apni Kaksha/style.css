@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+    
+}
+header{
+    background-color: black;
+}
+.banner{
+    background-image: url(logo.gif);
+    height: 16vw;
+    min-height: 100px;
+    background-position: top center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body{
+    margin: 0px;
+}
+nav , footer{
+    background-color: #333;
+    display: flex;
+}
+nav a{
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: flex;
+    float: left;
+}
+section{
+    text-align: center;
+    padding-top: 40px;
+    height: 100vh; /* here vh means each section will have a height of full screen size of your device.*/
+}
+section:nth-child(even){
+    background-color: #ececec;;
+}
+iframe{
+    padding: 0px 5px;
+}
+img{
+    padding: 0px 20px;
+}
+section h2 span{
+    background:linear-gradient(to right, #f5d837, #bbb812);
+    padding: 10px 55px;
+    border-radius: 20px;
+    color: white;
+}
+h4{
+    padding-top: 15px;
+}
+footer a{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.copyright{
+    float: right;
+    padding-bottom: 10px;
+}
+section p{
+    margin: 0px 130px;
+}
+.buttons:hover{
+    background-color: grey;
+}
+#LS , .copyright{
+    margin-left: auto;
+}
+.carousel-cell {
+    width: 66%;
+    border-radius: 5px;
+    margin-right: 10px;
+}    
+.carousel-cell video {
+    max-width: 100%;
+}
+.carousel-cell img{
+    max-width: 85%;
+}
+.profile_img{
+    border-radius: 50%;
+}
+.profile_name{
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    text-transform: uppercase;
+    margin: 20px 0px 30px 0px;
+}
+.handles{
+    padding-bottom: 10px;
+}
+.handles a{
+    background-color: rgb(227, 223, 223);
+    border-radius: 30px;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-size: 1.25em;
+}
+.handles a:hover{
+    background-color: rgba(122, 121, 121, 0.45);
+}
+.handles a i{
+    margin: 5px;
+}
+.yt{
+    color: #ff0000;
+}
+.ldin{
+    color: #0e76a8;
+}
+.insta{
+    color: #dd2a7b;
+}
+
+.founder_title{
+    color: #120f5e;
+    text-decoration: underline;
+   font-size: 1.25em;
+   padding-bottom: 4px;
+   margin: 0px;
+}
+.founder_details{
+    color:#1c1a3a;
+    font-weight: 900;
+}
+.about_founder{ 
+    margin-bottom: 10px;
+}
